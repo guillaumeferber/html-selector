@@ -1,0 +1,103 @@
+// select dropwdown
+$paddingSelect: 40px;
+$paddingSummarySelect: 60px;
+$animation-style: ease-out;
+$animation-delay: 0s;
+.c-select {
+    height: 100%;
+    width: 100%;
+}
+
+.c-select select,
+.c-select option {
+    visibility: hidden;
+    opacity: 0;
+    height: 0; width: 0;
+}
+
+.c-select__icon {
+    $iconDimensions: 16px;
+    position: absolute;
+    top: 50%; right: 0;
+    display: inline-block;
+    height: 15px;
+    width: 24px;
+    transition: transform .25s $animation-style $animation-delay;
+    transform: rotateX(0);
+    &:before,
+    &:after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        pointer-events: none;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        border-radius: 5px;
+        height: 4px;
+        width: $iconDimensions;
+        top: 50%;
+    }
+    &:before {
+        background: #1dadce;
+        right: $paddingSelect + 8px;
+        transform: rotate(-45deg);
+    }
+    &:after {
+        background: #d8e8c5;
+        right: ($paddingSelect + 8px) + 10px;
+        transform: rotate(45deg);
+    }
+}
+
+.c-select__option-group {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    top: 141px;
+    border-top: 1px solid #F2F3F5;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height .15s linear 0s;
+    z-index: 5;
+}
+
+.c-select__option-group__item {
+    display: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: $paddingSelect 12px;
+    background-color: rgb(248, 248, 248);
+    font-size: 1.55rem;
+    transition: all .25s ease-in-out $animation-delay;
+    &:hover {
+        background-color: #12273C;
+        color: rgb(248, 248, 248);
+    }
+}
+
+.c-select__option-box {
+    width: 100%;
+    padding: $paddingSelect 12px;
+    background-color: rgb(248, 248, 248);
+    font-size: 1.55rem;
+    height: 100%;
+    margin-bottom: 70px;
+    &.open {
+        .c-select__icon {
+            transform: rotateX(-180deg);
+        }
+
+        & + .c-select__option-group {
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+            .c-select__option-group__item {
+                display: block;
+            }
+        }
+
+    }
+}
