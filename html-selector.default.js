@@ -1,24 +1,21 @@
 /**
- * Configuration data
+ * Main configuration
  */
 const configuration = {
-    select: {
-        elem: '.js-select',
-        selectParentClassName: 'c-select',
-        selectElement: 'select',
-        options: {
-            groupClassName: 'c-select__option-group',
-            itemClassName: 'c-select__option-group__item'
-        },
-        selectBoxClassName: 'c-select__option-box'
-    }
-};
-
+    elem: '.js-select',
+    selectParentClassName: 'c-select',
+    selectElement: 'select',
+    options: {
+        groupClassName: 'c-select__option-group',
+        itemClassName: 'c-select__option-group__item'
+    },
+    selectBoxClassName: 'c-select__option-box'
+}
 /**
  * Main module
  */
 const HtmlSelectorModule = (function(doc, config) {
-    const init = function(config) {
+    const init = function() {
         _createSelect(config);
         _addEventListeners(config);
     }
@@ -126,5 +123,5 @@ const HtmlSelectorModule = (function(doc, config) {
     return {
         init: init
     }
-})(window.document, configuration.select);
+})(window.document, configuration).init();
 exports.htmlSelectorModule = HtmlSelectorModule;
