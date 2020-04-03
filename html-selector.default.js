@@ -124,4 +124,3 @@ const HtmlSelectorModule = (function(doc, config) {
         init: init
     }
 })(window.document, configuration).init();
-exports.htmlSelectorModule = HtmlSelectorModule;

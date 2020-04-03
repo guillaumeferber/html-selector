@@ -1,7 +1,7 @@
 {
   "name": "@guillaumeferber/html-selector",
-  "version": "1.0.5",
-  "description": "Selector.js is a JavaScript-based custom <select> UI control. It's useful for tagging, contact lists, form selectors.",
+  "version": "1.1.0",
+  "description": "html selector.js is a JavaScript-based custom <select> UI control. It's useful for tagging, contact lists, form selectors.",
   "main": "dist/html-selector.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,10 +16,12 @@
     "html",
     "select"
   ],
-  "author": "Guillaume Ferber",
-  "license": "Apache-2.0",
+  "author": "Guillaume Ferber <ferber.g@gmail.com> (http://guillaumeferber.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/guillaumeferber/html-selector/issues"
   },
+  "style": "dist/css/html-selector.default.css",
+  "unpkg": "dist/css/html-selector.min.css",
   "homepage": "https://github.com/guillaumeferber/html-selector#readme"
 }

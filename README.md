@@ -46,4 +46,4 @@ Just add the `js-select` class name to the select element you want to customize.
 
 
 ## License
-Apache 2.0 License &copy; Guillaume Ferber
+MIT License &copy; Guillaume Ferber

@@ -1,6 +1,6 @@
 // select dropwdown
 $paddingSelect: 40px;
-$paddingSummarySelect: 60px;
+$boxHeight: 60px;
 $animation-style: ease-out;
 $animation-duration: .25s;
 $animation-delay: 0s;
@@ -18,46 +18,48 @@ $animation-delay: 0s;
     left: -100%;
 }
 
+.c-select__option-box {
+    position: relative;
+    width: 100%;
+    height: $boxHeight;
+    line-height: $boxHeight;
+    background-color: rgb(248, 248, 248);
+    font-size: 1.55rem;
+    margin-bottom: 70px;
+    vertical-align: middle;
+    text-indent: $paddingSelect / 2;
+    &.open {
+        .c-select__icon { transform: rotate(-45deg); }
+        & + .c-select__option-group {
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+            .c-select__option-group__item { display: block; }
+        }
+    }
+}
+
 .c-select__icon {
     $iconDimensions: 16px;
-    position: absolute;
-    top: 50%; right: 0;
     display: inline-block;
-    height: 15px;
-    width: 24px;
-    transition: transform $animation-duration $animation-style $animation-delay;
-    transform: rotateX(0);
-    &:before,
-    &:after {
-        display: inline-block;
-        position: absolute;
-        content: "";
-        background: #000;
-        pointer-events: none;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        border-radius: 5px;
-        height: 4px;
-        width: $iconDimensions;
-        top: 50%;
-    }
-    &:before {
-        right: $paddingSelect + 8px;
-        transform: rotate(-45deg);
-    }
-    &:after {
-        right: ($paddingSelect + 8px) + 10px;
-        transform: rotate(45deg);
-    }
+    position: absolute;
+    top: calc(50% - (15px / 2)); right: $paddingSelect / 2;
+    height: 6px; width: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-right-color: #000;
+    border-top-color: #000;
+    transform-origin: center;
+    transform: rotate(135deg);
+    z-index: 0;
 }
 
 .c-select__option-group {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    left: 0;
-    top: 141px;
+    left: 0; right: 0;
+    top: $boxHeight;
     border-top: 1px solid #F2F3F5;
     height: 0;
     opacity: 0;
@@ -70,30 +72,14 @@ $animation-delay: 0s;
     display: none;
     cursor: pointer;
     margin-bottom: 0;
-    padding: $paddingSelect 12px;
+    height: $boxHeight;
+    line-height: $boxHeight;
+    vertical-align: middle;
+    text-indent: $paddingSelect / 2;
     background-color: rgb(248, 248, 248);
     font-size: 1.55rem;
-    transition: all $animation-duration $animation-style $animation-delay;
     &:hover {
         background-color: #000;
         color: rgb(248, 248, 248);
-    }
-}
-
-.c-select__option-box {
-    width: 100%;
-    padding: $paddingSelect 12px;
-    background-color: rgb(248, 248, 248);
-    font-size: 1.55rem;
-    height: 100%;
-    margin-bottom: 70px;
-    &.open {
-        .c-select__icon { transform: rotateX(-180deg); }
-        & + .c-select__option-group {
-            height: 100%;
-            opacity: 1;
-            visibility: visible;
-            .c-select__option-group__item { display: block; }
-        }
     }
 }
