@@ -22,7 +22,7 @@ Add the script tag before the closing `<body>` tag
 
 1) Add the link CSS tag in `<head>`
 <pre>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;node_modules/@guillaumeferber/html-selector/css/html-selector.min.css&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;node_modules/@guillaumeferber/html-selector/css/html-selector.min.css&quot;&gt;/&lt;;
 </pre>
 
 2) or you can import the Sass file to your Sass project
@@ -37,10 +37,10 @@ Just add the `js-select` class name to the select element you want to customize.
 
 ```
 <select class="js-select">
-<option>Select</option>
-<option value="value_1">option #1</option>
-<option value="value_2">option #2</option>
-<option value="value_3">option #3</option>
+	<option>Select</option>
+	<option value="value_1">option #1</option>
+	<option value="value_2">option #2</option>
+	<option value="value_3">option #3</option>
 </select>
 ```
 
