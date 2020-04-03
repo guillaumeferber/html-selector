@@ -15,14 +15,14 @@ You can get it on npm.
 Add the script tag before the closing `<body>` tag
 
 <pre>
-&lt;script src=&quot;node_modules/@guillaumeferber/html-selector/html-selector.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;node_modules/@guillaumeferber/html-selector/dist/html-selector.min.js&quot;&gt;&lt;/script&gt;
 </pre>
 
 #### CSS/SCSS
 
 1) Add the link CSS tag in `<head>`
 <pre>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;node_modules/@guillaumeferber/html-selector/css/html-selector.min.css&quot;/&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;node_modules/@guillaumeferber/html-selector/dist/css/html-selector.min.css&quot;/&gt;
 </pre>
 
 2) or you can import the Sass file to your Sass project
