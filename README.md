@@ -1,14 +1,12 @@
 # html-selector
 
 ## Install
----
 
 You can get it on npm.
 
 <pre>$ npm install @guillaumeferber/html-selector --save</pre>
 
 ## Usage
----
 
 ### Standalone
 
@@ -39,10 +37,10 @@ Just add the `js-select` class name to the select element you want to customize.
 
 ```
 <select class="js-select">
-	<option>Select</option>
-	<option value="value_1">option #1</option>
-	<option value="value_2">option #2</option>
-	<option value="value_3">option #3</option>
+<option>Select</option>
+<option value="value_1">option #1</option>
+<option value="value_2">option #2</option>
+<option value="value_3">option #3</option>
 </select>
 ```
 
