@@ -22,7 +22,7 @@ Add the script tag before the closing `<body>` tag
 
 1) Add the link CSS tag in `<head>`
 <pre>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;node_modules/@guillaumeferber/html-selector/css/html-selector.min.css&quot;&gt;/&lt;;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;node_modules/@guillaumeferber/html-selector/css/html-selector.min.css&quot;/&gt;
 </pre>
 
 2) or you can import the Sass file to your Sass project
