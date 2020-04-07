@@ -55,6 +55,7 @@ const HtmlSelectorModule = (function(doc, config) {
     }
 
     const _createSelect = function(config) {
+        if (!doc.querySelector(config.elem)) return;
         _createSelectParent(doc.querySelector(config.elem), config);
         const selectParent = doc.querySelector('.' + config.selectParentClassName);
 
