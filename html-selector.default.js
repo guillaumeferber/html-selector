@@ -82,7 +82,7 @@ var HtmlSelectorModule = (function(doc, config) {
         var container = doc.createElement('div');
         container.classList.add(config.options.groupClassName);
         optionList.map(function(item, index) {
-            if (index > 0) {
+            if (0 !== index) {
                 var option = doc.createElement('div');
                 option.classList.add(config.options.itemClassName);
                 option.setAttribute('rel', item.value);
