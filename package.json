@@ -1,6 +1,6 @@
 {
   "name": "@guillaumeferber/html-selector",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "html selector.js is a JavaScript-based custom <select> UI control. It's useful for tagging, contact lists, form selectors.",
   "main": "dist/html-selector.min.js",
   "scripts": {

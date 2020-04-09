@@ -3,6 +3,7 @@
  */
 var HtmlSelectorModule = (function(doc, config) {
     var init = function() {
+        if (!doc.querySelector(config.elem)) return;
         _createSelect(config);
         _addEventListeners(config);
     }
@@ -42,7 +43,6 @@ var HtmlSelectorModule = (function(doc, config) {
     }
 
     var _createSelect = function(config) {
-        if (!doc.querySelector(config.elem)) return;
         _createSelectParent(doc.querySelector(config.elem), config);
         var selectParent = doc.querySelector('.' + config.selectParentClassName);
 
