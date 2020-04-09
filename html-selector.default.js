@@ -20,7 +20,7 @@ var HtmlSelectorModule = (function(doc, config) {
                     var selectList = doc.querySelectorAll(config.elem);
                     if (selectList.length) {
                         Array.from(selectList).map(function(select) {
-                            Array.from(select.children).map(item => item.removeAttribute('selected'));
+                            Array.from(select.children).map(function(item) { item.removeAttribute('selected') });
                             var selectedOption = Array.from(select.children).find(function(item) { return item.value === option.getAttribute('rel')});
                             selectedOption.setAttribute('selected', '');
                             box.classList.remove('open');
