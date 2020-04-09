@@ -1,5 +1,7 @@
-/**
- * Main module
+/*!
+ * HtmlSelector v1.1.5 (https://www.npmjs.com/package/@guillaumeferber/html-selector)
+ * Copyright 2020 Guillaume Ferber
+ * Licensed under MIT (https://github.com/guillaumeferber/html-selector/blob/master/LICENCE.md)
  */
 var HtmlSelectorModule = (function(doc, config) {
     var init = function() {
